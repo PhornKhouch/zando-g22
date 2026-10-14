@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zando-clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+  </head>
+
+<body>
+     <!-- menu-section -->
+    <section class="header-container-full">
+      <div class="header-container">
+        <div class="nav">
+          <ul>
+            <li>
+              <a href="">HOME</a>
+            </li>
+            <li>
+              <a href="">MEN</a>
+            </li>
+            <li>
+              <a href="">WOMEN</a>
+            </li>
+            <li>
+              <a href="">KIDS</a>
+            </li>
+            <li>
+              <a href="">LIFESTYLE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="logo">
+          <img src="image/LOGO/ZANDO-NEW-LOGO-2025.png" alt="" />
+        </div>
+        <div class="search">
+          <!-- From Uiverse.io by satyamchaudharydev -->
+          <form class="form">
+            <button>
+              <svg
+                width="17"
+                height="16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-labelledby="search"
+              >
+                <path
+                  d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                  stroke="currentColor"
+                  stroke-width="1.333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+            <input
+              class="input"
+              placeholder="Type your text"
+              required=""
+              type="text"
+            />
+            <button class="reset" type="reset">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="login-register">
+          <ul>
+            <li>
+              <a href=""><i class="fa-regular fa-user"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-regular fa-bell"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Product Detail Section -->
+    <main class="product-detail-wrapper">
+      <!-- Left Gallery -->
+      <div class="product-gallery">
+        <!-- Thumbnails Column -->
+        <div class="gallery-thumbs-col">
+          <button class="gallery-back-btn" onclick="window.history.back()" title="Go Back">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div class="thumb-item active" onclick="switchImage(0, 'image/top-sell/11.jpg', 'image/top-sell/12.jpg')">
+            <img src="image/top-sell/11.jpg" alt="Thumbnail 1" />
+          </div>
+          <div class="thumb-item" onclick="switchImage(1, 'image/top-sell/12.jpg', 'image/top-sell/14.jpg')">
+            <img src="image/top-sell/12.jpg" alt="Thumbnail 2" />
+          </div>
+          <div class="thumb-item" onclick="switchImage(2, 'image/top-sell/13.jpg', 'image/top-sell/11.jpg')">
+            <img src="image/top-sell/13.jpg" alt="Thumbnail 3" />
+          </div>
+          <div class="thumb-item" onclick="switchImage(3, 'image/top-sell/14.jpg', 'image/top-sell/12.jpg')">
+            <img src="image/top-sell/14.jpg" alt="Thumbnail 4" />
+          </div>
+        </div>
+
+        <!-- Main Image Display -->
+        <div class="gallery-main-display">
+          <button class="gallery-nav-btn prev" onclick="prevImage()" title="Previous Image">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="main-img-box">
+            <img id="mainProductImg" src="image/top-sell/11.jpg" alt="Racing Graphic Long Sleeve T-Shirt" />
+          </div>
+          <div class="secondary-img-box">
+            <img id="secondaryProductImg" src="image/top-sell/12.jpg" alt="Detail Angle" />
+          </div>
+          <button class="gallery-nav-btn next" onclick="nextImage()" title="Next Image">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Product Information -->
+      <div class="product-info-panel">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav">
+          <a href="index.html">Home</a>
+          <span class="sep">&gt;</span>
+          <a href="#">MEN</a>
+          <span class="sep">&gt;</span>
+          <a href="#">Clothing</a>
+          <span class="sep">&gt;</span>
+          <a href="#">T-Shirts</a>
+          <span class="sep">&gt;</span>
+          <span class="current">Racing Graphic Long Sleeve T-Shirt</span>
+        </nav>
+
+        <!-- Brand & Title -->
+        <div class="product-brand">TEN11</div>
+        <h1 class="product-title">Racing Graphic Long Sleeve T-Shirt</h1>
+        <div class="product-price-val">$18.95</div>
+
+        <!-- Color Selection -->
+        <div class="color-section-wrap">
+          <div class="section-subtitle">1 Colors available</div>
+          <div class="color-swatch-list">
+            <div class="color-swatch-card">
+              <div class="swatch-box">
+                <img src="image/top-sell/12.jpg" alt="White" />
+              </div>
+              <span class="swatch-name">White</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Size Guide Banner -->
+        <div class="size-guide-box">
+          <span>Find the size that fits your measurements</span>
+          <a href="#" class="size-guide-link">Open size guide</a>
+        </div>
+
+        <!-- Size Selection -->
+        <div class="size-selector-wrap">
+          <div class="section-subtitle">Please select one size</div>
+          <div class="size-btn-group">
+            <button class="size-chip-btn" onclick="selectSize(this, 'S')">S</button>
+            <button class="size-chip-btn" onclick="selectSize(this, 'M')">M</button>
+            <button class="size-chip-btn" onclick="selectSize(this, 'L')">L</button>
+            <button class="size-chip-btn" onclick="selectSize(this, 'XL')">XL</button>
+            <button class="size-chip-btn" onclick="selectSize(this, 'XXL')">XXL</button>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="cart-actions-row">
+          <button class="btn-add-bag" id="addBagBtn" onclick="addToBag()">Add to bag</button>
+          <button class="btn-wishlist" id="wishlistBtn" onclick="toggleWishlist()" title="Add to Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="product-trust-row">
+          <div class="trust-row-item">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 14H28V32H4V14Z" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 20H38L44 26V32H28V20Z" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="14" cy="34" r="4" stroke="#000" stroke-width="2.2"/>
+              <circle cx="36" cy="34" r="4" stroke="#000" stroke-width="2.2"/>
+              <path d="M4 18H0M6 22H1M4 26H0" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Global Shipping</span>
+          </div>
+          <div class="trust-row-item">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6L40 14V34L24 42L8 34V14L24 6Z" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M24 22L40 14M24 22L8 14M24 22V42" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M16 10L32 18" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>14-Day Return Policy</span>
+          </div>
+        </div>
+
+        <!-- Model Info -->
+        <div class="model-info-block">
+          <h4>Model Info</h4>
+          <p>Model wears size L &bull; Height: 183cm / 6'0" &bull; Chest: 96cm</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-full">
+      <div class="footer-container">
+        <!-- Col 1: ZANDO App -->
+        <div class="footer-col">
+          <h4>ZANDO App</h4>
+          <div class="app-download-box">
+            <div class="qr-code">
+              <svg viewBox="0 0 100 100" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 8H38V38H8V8ZM14 14V32H32V14H14ZM20 20H26V26H20V20Z"/>
+                <path d="M62 8H92V38H62V8ZM68 14V32H86V14H68ZM74 20H80V26H74V20Z"/>
+                <path d="M8 62H38V92H8V62ZM14 68V86H32V68H14ZM20 74H26V80H20V74Z"/>
+                <rect x="44" y="10" width="6" height="6"/>
+                <rect x="44" y="22" width="6" height="6"/>
+                <rect x="52" y="16" width="6" height="6"/>
+                <rect x="52" y="28" width="6" height="6"/>
+                <rect x="10" y="44" width="6" height="6"/>
+                <rect x="22" y="44" width="6" height="6"/>
+                <rect x="32" y="50" width="6" height="6"/>
+                <rect x="44" y="44" width="6" height="6"/>
+                <rect x="52" y="44" width="6" height="6"/>
+                <rect x="64" y="44" width="6" height="6"/>
+                <rect x="76" y="44" width="6" height="6"/>
+                <rect x="86" y="44" width="6" height="6"/>
+                <rect x="62" y="62" width="6" height="6"/>
+                <rect x="74" y="62" width="6" height="6"/>
+                <rect x="86" y="62" width="6" height="6"/>
+                <rect x="62" y="74" width="6" height="6"/>
+                <rect x="74" y="74" width="6" height="6"/>
+                <rect x="86" y="74" width="6" height="6"/>
+                <rect x="62" y="86" width="6" height="6"/>
+                <rect x="74" y="86" width="6" height="6"/>
+                <rect x="86" y="86" width="6" height="6"/>
+                <rect x="44" y="62" width="6" height="6"/>
+                <rect x="44" y="74" width="6" height="6"/>
+                <rect x="44" y="86" width="6" height="6"/>
+              </svg>
+            </div>
+            <div class="app-buttons">
+              <a href="#" class="app-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.6 1.8C3.3 2.1 3.1 2.6 3.1 3.2V20.8C3.1 21.4 3.3 21.9 3.6 22.2L12.7 13.1L3.6 1.8Z" fill="#00C1FF"/>
+                  <path d="M16.3 9.5L12.7 13.1L16.3 16.7L20.5 14.3C21.7 13.6 21.7 12.6 20.5 11.9L16.3 9.5Z" fill="#FFC800"/>
+                  <path d="M3.6 22.2C4.1 22.7 4.9 22.7 5.9 22.1L16.3 16.7L12.7 13.1L3.6 22.2Z" fill="#FF3A44"/>
+                  <path d="M3.6 1.8L12.7 10.9L16.3 7.3L5.9 1.9C4.9 1.3 4.1 1.3 3.6 1.8Z" fill="#00E676"/>
+                </svg>
+                <div class="app-btn-text">
+                  <span class="small-txt">GET IT ON</span>
+                  <span class="big-txt">Google Play</span>
+                </div>
+              </a>
+              <a href="#" class="app-btn">
+                <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.7 19.5C17.7 21 16.6 22.4 15 22.5C13.4 22.5 12.9 21.5 11.1 21.5C9.3 21.5 8.7 22.4 7.2 22.5C5.7 22.6 4.4 21 3.4 19.5C1.4 16.6 0 11.7 1.5 9.1C2.3 7.8 3.7 7 5.2 7C6.7 7 7.6 7.9 8.8 7.9C10 7.9 10.7 7 12.3 7C13.7 7 14.9 7.7 15.7 8.8C12.4 10.7 13 15.3 16.3 16.6C15.6 17.7 14.7 18.9 13.7 19.5M14.9 4.7C15.6 3.8 16.1 2.6 15.9 1.4C14.8 1.5 13.5 2.2 12.8 3C12.2 3.8 11.7 5 11.9 6.2C13.1 6.3 14.3 5.5 14.9 4.7Z"/>
+                </svg>
+                <div class="app-btn-text">
+                  <span class="small-txt">Download on the</span>
+                  <span class="big-txt">App Store</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Customer Care -->
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Return & Exchange</a></li>
+            <li><a href="#">Membership & Benefits</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Get in Touch -->
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><a href="tel:+85581999716">+855 81 999 716 (Smart)</a></li>
+            <li><a href="tel:+85561330330">+855 61 330 330 (Cellcard)</a></li>
+            <li><a href="mailto:customer.care@zandokh.com">customer.care@zandokh.com</a></li>
+            <li><a href="#">Customer Support (Telegram)</a></li>
+            <li><a href="#">ZANDO Career (Telegram)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Follow Us -->
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Youtube</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Payment Methods -->
+        <div class="footer-col payment-col">
+          <h4>Payment Methods</h4>
+          <div class="payment-image">
+            <img src="https://zand.sgp1.cdn.digitaloceanspaces.com/catalog/logo/zando/payment/V2/we-accept-payment%E2%80%93for-web-footer-zando%E2%80%933.png" alt="Payment Methods" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2015 - 2026 Zando. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+      const galleryPairs = [
+        { main: 'image/top-sell/11.jpg', sec: 'image/top-sell/12.jpg' },
+        { main: 'image/top-sell/12.jpg', sec: 'image/top-sell/14.jpg' },
+        { main: 'image/top-sell/13.jpg', sec: 'image/top-sell/11.jpg' },
+        { main: 'image/top-sell/14.jpg', sec: 'image/top-sell/12.jpg' }
+      ];
+      let currentIdx = 0;
+
+      function switchImage(idx, mainSrc, secSrc) {
+        currentIdx = idx;
+        document.getElementById('mainProductImg').src = mainSrc;
+        document.getElementById('secondaryProductImg').src = secSrc;
+        
+        const thumbs = document.querySelectorAll('.thumb-item');
+        thumbs.forEach((thumb, i) => {
+          if (i === idx) thumb.classList.add('active');
+          else thumb.classList.remove('active');
+        });
+      }
+
+      function nextImage() {
+        currentIdx = (currentIdx + 1) % galleryPairs.length;
+        switchImage(currentIdx, galleryPairs[currentIdx].main, galleryPairs[currentIdx].sec);
+      }
+
+      function prevImage() {
+        currentIdx = (currentIdx - 1 + galleryPairs.length) % galleryPairs.length;
+        switchImage(currentIdx, galleryPairs[currentIdx].main, galleryPairs[currentIdx].sec);
+      }
+
+      function selectSize(btn, size) {
+        document.querySelectorAll('.size-chip-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('addBagBtn').classList.add('ready');
+      }
+
+      function toggleWishlist() {
+        const btn = document.getElementById('wishlistBtn');
+        btn.classList.toggle('active');
+        const icon = btn.querySelector('i');
+        if (btn.classList.contains('active')) {
+          icon.classList.remove('fa-regular');
+          icon.classList.add('fa-solid');
+        } else {
+          icon.classList.remove('fa-solid');
+          icon.classList.add('fa-regular');
+        }
+      }
+
+      function addToBag() {
+        const activeSize = document.querySelector('.size-chip-btn.active');
+        if (!activeSize) {
+          alert('Please select a size first.');
+          return;
+        }
+        alert('Added Racing Graphic Long Sleeve T-Shirt (' + activeSize.innerText + ') to bag!');
+      }
+    </script>
+  </body>
+</html>
